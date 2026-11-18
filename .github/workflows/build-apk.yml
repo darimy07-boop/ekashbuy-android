@@ -33,10 +33,10 @@ jobs:
           mkdir -p source
           unzip -q ekashbuy-cloud-build-ready.zip -d source
 
-      - name: Restore debug keystore
+      -       - name: Restore debug keystore
         run: |
-          test -f source/debug.keystore.base64
-          base64 -d source/debug.keystore.base64 > source/debug.keystore
+          test -f debug.keystore.base64
+          base64 -d debug.keystore.base64 > source/debug.keystore
           test -s source/debug.keystore
           ls -lh source/debug.keystore
 
