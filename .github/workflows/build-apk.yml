@@ -33,18 +33,28 @@ jobs:
           mkdir -p source
           unzip -q ekashbuy-cloud-build-ready.zip -d source
 
-      
-      - name: Diagnose debug keystore location
+      - name: Prepare debug keystore
         run: |
-          echo "=== Repository root ==="
-          ls -la
-          echo "=== Source folder ==="
-          ls -la source || true
-          echo "=== Search repository ==="
-          find . -type f \( -name "debug.keystore" -o -name "debug.keystore.base64" \) -print || true
-          echo "=== Search ZIP ==="
-          unzip -l ekashbuy-cloud-build-ready.zip | grep -i "debug.keystore" || true
-
+          if [ -f source/debug.keystore.base64 ]; then
+            echo "Restoring debug keystore from source/debug.keystore.base64"
+            base64 -d source/debug.keystore.base64 > source/debug.keystore
+          elif [ -f debug.keystore.base64 ]; then
+            echo "Restoring debug keystore from repository root debug.keystore.base64"
+            base64 -d debug.keystore.base64 > source/debug.keystore
+          elif [ ! -f source/debug.keystore ]; then
+            echo "No debug.keystore.base64 found; generating temporary debug keystore"
+            keytool -genkeypair -noprompt \
+              -keystore source/debug.keystore \
+              -storepass android \
+              -alias androiddebugkey \
+              -keypass android \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 10000 \
+              -dname "CN=Android Debug,O=Android,C=US"
+          fi
+          test -s source/debug.keystore
+          keytool -list -v -keystore source/debug.keystore -storepass android -alias androiddebugkey | grep -E "SHA1:|SHA256:" || true
 
       - name: Build APK
         run: gradle -p source :app:assembleDebug --no-daemon
