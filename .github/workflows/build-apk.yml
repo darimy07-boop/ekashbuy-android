@@ -33,12 +33,18 @@ jobs:
           mkdir -p source
           unzip -q ekashbuy-cloud-build-ready.zip -d source
 
-      - name: Restore debug keystore
+      
+      - name: Diagnose debug keystore location
         run: |
-          test -f debug.keystore.base64
-          base64 -d debug.keystore.base64 > source/debug.keystore
-          test -s source/debug.keystore
-          ls -lh source/debug.keystore
+          echo "=== Repository root ==="
+          ls -la
+          echo "=== Source folder ==="
+          ls -la source || true
+          echo "=== Search repository ==="
+          find . -type f \( -name "debug.keystore" -o -name "debug.keystore.base64" \) -print || true
+          echo "=== Search ZIP ==="
+          unzip -l ekashbuy-cloud-build-ready.zip | grep -i "debug.keystore" || true
+
 
       - name: Build APK
         run: gradle -p source :app:assembleDebug --no-daemon
