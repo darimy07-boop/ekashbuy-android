@@ -32,7 +32,10 @@ jobs:
         run: |
           mkdir -p source
           unzip -q ekashbuy-cloud-build-ready.zip -d source
-
+        - name: Add Firebase configuration
+          run: |
+            cp google-services.json source/app/google-services.json
+            test -s source/app/google-services.json
       - name: Prepare debug keystore
         run: |
           if [ -f source/debug.keystore.base64 ]; then
