@@ -37,7 +37,11 @@ jobs:
         run: |
           cp google-services.json source/app/google-services.json
           test -s source/app/google-services.json
-
+      - name: Restore persistent debug keystore
+        uses: actions/cache@v4
+        with:
+          path: source/debug.keystore
+          key: ekashbuy-debug-keystore-v1
       - name: Prepare debug keystore
         run: |
           if [ -f source/debug.keystore.base64 ]; then
