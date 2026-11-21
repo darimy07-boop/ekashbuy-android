@@ -1,0 +1,124 @@
+{
+  "project_info": {
+    "project_number": "393159475023",
+    "project_id": "kashbuy-4988a",
+    "storage_bucket": "kashbuy-4988a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393159475023:android:5908940e0361506e9c4f3a",
+        "android_client_info": {
+          "package_name": "com.aistudio.ekashbuy.kshmrp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393159475023-hkb4i6k54o998bihimc1dbeos82dddg4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.ekashbuy.kshmrp",
+            "certificate_hash": "73e57b786189d625bfe5e4354fbb0d022fb023b9"
+          }
+        },
+        {
+          "client_id": "393159475023-r9dp2h6t6c60b2k9gmef403hogokqe3q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.ekashbuy.kshmrp",
+            "certificate_hash": "229fcf9a814845198138f36912657c80ed3eadb2"
+          }
+        },
+        {
+          "client_id": "393159475023-v2e17fa67dtuptrmv1drb542eem7s5ck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.ekashbuy.kshmrp",
+            "certificate_hash": "73e57b786189d625bfe5e4354fbb0d022f802389"
+          }
+        },
+        {
+          "client_id": "393159475023-qmk459gg66jbu4iulq1li622esh3m1sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkFlizuXvx1QaGDdvVvNyIK5HoP20E7zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393159475023-qmk459gg66jbu4iulq1li622esh3m1sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393159475023:android:97de882cc63e20729c4f3a",
+        "android_client_info": {
+          "package_name": "com.kashbuy.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393159475023-3l3ci118snccp65pihbcm56hfc51c6m2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kashbuy.app",
+            "certificate_hash": "bfe828b4d0b19319e26d0f5439b9063f810500d9"
+          }
+        },
+        {
+          "client_id": "393159475023-8orhbmn5kk54ejb8r4f3ldgtriqsbs85.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kashbuy.app",
+            "certificate_hash": "229fcf9a814845198138f36912657c80ed3eadb2"
+          }
+        },
+        {
+          "client_id": "393159475023-i9ccb7ef3hc2fvua4gi2annvatq9hbi5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kashbuy.app",
+            "certificate_hash": "002585345f4f77a270ae147b87d035fe0fc43236"
+          }
+        },
+        {
+          "client_id": "393159475023-m2belj3as6en418send4f7istaol8td8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kashbuy.app",
+            "certificate_hash": "0ef0b19c84ea5dcab65d3bfb5d7cacdef3a7b71a"
+          }
+        },
+        {
+          "client_id": "393159475023-qmk459gg66jbu4iulq1li622esh3m1sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkFlizuXvx1QaGDdvVvNyIK5HoP20E7zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393159475023-qmk459gg66jbu4iulq1li622esh3m1sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
